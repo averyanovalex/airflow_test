@@ -37,7 +37,7 @@ def load_data(tmp_file, table_name, conn=CON, **context):
 # Для DAG-а характерны следующие атрибуты
 # - Интервал запусков
 # - Начальная точка запуска
-with DAG(dag_id='dag',
+with DAG(dag_id='test_first_dag',
          default_args={'owner': 'airflow'},
          schedule_interval='@daily', # Интервал запусков
          start_date=days_ago(1) # Начальная точка запуска
