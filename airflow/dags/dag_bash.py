@@ -4,7 +4,7 @@ from airflow.utils.dates import days_ago
 from airflow.operators.bash_operator import BashOperator
  
 # Создадим объект класса DAG
-dag =  DAG('test_dag_bash',schedule_interval=timedelta(days=1), start_date=days_ago(1))
+dag =  DAG('avea_test_dag_bash',schedule_interval=timedelta(days=1), start_date=days_ago(1))
 
 # Создадим несколько шагов, которые будут параллельно исполнять bash команды
 t1 = BashOperator(task_id='echo_1', bash_command='echo 1',dag=dag)
